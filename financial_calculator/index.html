@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Financial Calculators</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Advanced Financial Calculators</h1>
+    </header>
+
+    <div class="container">
+      <div>
+        <button onclick="showCalculator('emi')">EMI Calculator</button>
+        <button onclick="showCalculator('sip')">SIP Calculator</button>
+        <button onclick="showCalculator('fd')">FD Calculator</button>
+        <button onclick="showCalculator('tax')">Tax Calculator</button>
+      </div>
+
+      <div id="emi" class="calculator active">
+        <h2>EMI Calculator</h2>
+        <input type="number" id="loanAmount" placeholder="Loan Amount" />
+        <input
+          type="number"
+          id="interestRate"
+          placeholder="Interest Rate (%)"
+        />
+        <input type="number" id="loanTenure" placeholder="Tenure (years)" />
+        <button onclick="calculateEMI()">Calculate EMI</button>
+        <p id="emiResult"></p>
+        <p id="totalInterest"></p>
+        <p id="totalPayment"></p>
+      </div>
+
+      <div id="sip" class="calculator">
+        <h2>SIP Calculator</h2>
+        <input type="number" id="sipAmount" placeholder="Monthly Investment" />
+        <input
+          type="number"
+          id="sipRate"
+          placeholder="Expected Return Rate (%)"
+        />
+        <input type="number" id="sipTenure" placeholder="Tenure (years)" />
+        <button onclick="calculateSIP()">Calculate SIP</button>
+        <p id="sipResult"></p>
+        <p id="sipFutureValue"></p>
+      </div>
+
+      <div id="fd" class="calculator">
+        <h2>FD Calculator</h2>
+        <input type="number" id="fdAmount" placeholder="Deposit Amount" />
+        <input type="number" id="fdRate" placeholder="Interest Rate (%)" />
+        <input type="number" id="fdTenure" placeholder="Tenure (years)" />
+        <button onclick="calculateFD()">Calculate FD</button>
+        <p id="fdResult"></p>
+        <p id="fdFutureValue"></p>
+      </div>
+
+      <div id="tax" class="calculator">
+        <h2>Tax Calculator</h2>
+        <input type="number" id="income" placeholder="Annual Income" />
+        <button onclick="calculateTax()">Calculate Tax</button>
+        <p id="taxResult"></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
